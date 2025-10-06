@@ -1,0 +1,130 @@
+$ pip install -r requirements.txt --index-url  https://pypi.python.org/simple/ --trusted-host files.pythonhosted.org
+Defaulting to user installation because normal site-packages is not writeable
+Looking in indexes: https://pypi.python.org/simple/
+Collecting torch==1.13.1
+  Downloading torch-1.13.1-cp38-cp38-manylinux1_x86_64.whl (887.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.4/887.4 MB 1.6 MB/s eta 0:00:00
+Collecting torchvision==0.14.1
+  Downloading torchvision-0.14.1-cp38-cp38-manylinux1_x86_64.whl (24.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.2/24.2 MB 2.0 MB/s eta 0:00:00
+Collecting datasets==2.7.1
+  Downloading datasets-2.7.1-py3-none-any.whl (451 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 451.7/451.7 kB 1.9 MB/s eta 0:00:00
+Collecting transformers==4.26.1
+  Downloading transformers-4.26.1-py3-none-any.whl (6.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 3.3 MB/s eta 0:00:00
+Collecting numpy==1.21.6
+  Downloading numpy-1.21.6-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (15.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.7/15.7 MB 1.6 MB/s eta 0:00:00
+Requirement already satisfied: typing-extensions in /usr/local/micron/lib/python3.8/site-packages (from torch==1.13.1->-r requirements.txt (line 2)) (4.3.0)
+Collecting nvidia-cublas-cu11==11.10.3.66
+  Downloading nvidia_cublas_cu11-11.10.3.66-py3-none-manylinux1_x86_64.whl (317.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 317.1/317.1 MB 3.2 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu11==8.5.0.96
+  Downloading nvidia_cudnn_cu11-8.5.0.96-2-py3-none-manylinux1_x86_64.whl (557.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 557.1/557.1 MB 2.4 MB/s eta 0:00:00
+Collecting nvidia-cuda-runtime-cu11==11.7.99
+  Downloading nvidia_cuda_runtime_cu11-11.7.99-py3-none-manylinux1_x86_64.whl (849 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 849.3/849.3 kB 18.4 MB/s eta 0:00:00
+Collecting nvidia-cuda-nvrtc-cu11==11.7.99
+  Downloading nvidia_cuda_nvrtc_cu11-11.7.99-2-py3-none-manylinux1_x86_64.whl (21.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.0/21.0 MB 3.4 MB/s eta 0:00:00
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /usr/local/micron/lib/python3.8/site-packages (from torchvision==0.14.1->-r requirements.txt (line 3)) (8.2.0)
+Requirement already satisfied: requests in /usr/local/micron/lib/python3.8/site-packages (from torchvision==0.14.1->-r requirements.txt (line 3)) (2.22.0)
+Requirement already satisfied: pyyaml>=5.1 in /usr/local/micron/lib/python3.8/site-packages (from datasets==2.7.1->-r requirements.txt (line 4)) (6.0)
+Collecting responses<0.19
+  Downloading responses-0.18.0-py3-none-any.whl (38 kB)
+Collecting huggingface-hub<1.0.0,>=0.2.0
+  Downloading huggingface_hub-0.35.3-py3-none-any.whl (564 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 564.3/564.3 kB 1.4 MB/s eta 0:00:00
+Collecting tqdm>=4.62.1
+  Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.5/78.5 kB 943.8 kB/s eta 0:00:00
+Collecting xxhash
+  Downloading xxhash-3.6.0-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (193 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.5/193.5 kB 2.5 MB/s eta 0:00:00
+Requirement already satisfied: packaging in /usr/local/micron/lib/python3.8/site-packages (from datasets==2.7.1->-r requirements.txt (line 4)) (24.0)
+Collecting multiprocess
+  Downloading multiprocess-0.70.18-py38-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.6/132.6 kB 1.2 MB/s eta 0:00:00
+Requirement already satisfied: pandas in /usr/local/micron/lib/python3.8/site-packages (from datasets==2.7.1->-r requirements.txt (line 4)) (1.1.5)
+Collecting fsspec[http]>=2021.11.1
+  Downloading fsspec-2025.3.0-py3-none-any.whl (193 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.6/193.6 kB 1.3 MB/s eta 0:00:00
+Collecting aiohttp
+  Downloading aiohttp-3.10.11-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 2.6 MB/s eta 0:00:00
+Collecting pyarrow>=6.0.0
+  Downloading pyarrow-17.0.0-cp38-cp38-manylinux_2_28_x86_64.whl (40.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.0/40.0 MB 3.4 MB/s eta 0:00:00
+Collecting dill<0.3.7
+  Downloading dill-0.3.6-py3-none-any.whl (110 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 110.5/110.5 kB 967.5 kB/s eta 0:00:00
+Collecting filelock
+  Downloading filelock-3.16.1-py3-none-any.whl (16 kB)
+Collecting tokenizers!=0.11.3,<0.14,>=0.11.1
+  Downloading tokenizers-0.13.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.8/7.8 MB 2.9 MB/s eta 0:00:00
+Collecting regex!=2019.12.17
+  Downloading regex-2024.11.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (785 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 785.1/785.1 kB 2.6 MB/s eta 0:00:00
+Requirement already satisfied: setuptools in /usr/local/micron/lib/python3.8/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==1.13.1->-r requirements.txt (line 2)) (65.3.0)
+Requirement already satisfied: wheel in /usr/local/micron/lib/python3.8/site-packages (from nvidia-cublas-cu11==11.10.3.66->torch==1.13.1->-r requirements.txt (line 2)) (0.37.1)
+Collecting aiosignal>=1.1.2
+  Downloading aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Collecting multidict<7.0,>=4.5
+  Downloading multidict-6.1.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (129 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.7/129.7 kB 52.4 MB/s eta 0:00:00
+Collecting aiohappyeyeballs>=2.3.0
+  Downloading aiohappyeyeballs-2.4.4-py3-none-any.whl (14 kB)
+Collecting attrs>=17.3.0
+  Downloading attrs-25.3.0-py3-none-any.whl (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 742.6 kB/s eta 0:00:00
+Collecting yarl<2.0,>=1.12.0
+  Downloading yarl-1.15.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (319 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 319.0/319.0 kB 4.0 MB/s eta 0:00:00
+Collecting async-timeout<6.0,>=4.0
+  Downloading async_timeout-5.0.1-py3-none-any.whl (6.2 kB)
+Collecting frozenlist>=1.1.1
+  Downloading frozenlist-1.5.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (243 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 243.1/243.1 kB 5.9 MB/s eta 0:00:00
+Collecting hf-xet<2.0.0,>=1.1.3
+  Downloading hf_xet-1.1.10-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 2.1 MB/s eta 0:00:00
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1 in /usr/local/micron/lib/python3.8/site-packages (from requests->torchvision==0.14.1->-r requirements.txt (line 3)) (1.25.7)
+Requirement already satisfied: idna<2.9,>=2.5 in /usr/local/micron/lib/python3.8/site-packages (from requests->torchvision==0.14.1->-r requirements.txt (line 3)) (2.8)
+Requirement already satisfied: certifi>=2017.4.17 in /usr/local/micron/lib/python3.8/site-packages (from requests->torchvision==0.14.1->-r requirements.txt (line 3)) (2019.11.28)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /usr/local/micron/lib/python3.8/site-packages (from requests->torchvision==0.14.1->-r requirements.txt (line 3)) (3.0.4)
+Collecting urllib3!=1.25.0,!=1.25.1,<1.26,>=1.21.1
+  Downloading urllib3-1.25.11-py2.py3-none-any.whl (127 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.0/128.0 kB 1.1 MB/s eta 0:00:00
+Collecting multiprocess
+  Downloading multiprocess-0.70.17-py38-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.6/132.6 kB 1.2 MB/s eta 0:00:00
+  Downloading multiprocess-0.70.16-py38-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.6/132.6 kB 1.2 MB/s eta 0:00:00
+  Downloading multiprocess-0.70.15-py38-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.6/132.6 kB 1.2 MB/s eta 0:00:00
+  Downloading multiprocess-0.70.14-py38-none-any.whl (132 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 132.0/132.0 kB 1.2 MB/s eta 0:00:00
+Requirement already satisfied: python-dateutil>=2.7.3 in /usr/local/micron/lib/python3.8/site-packages (from pandas->datasets==2.7.1->-r requirements.txt (line 4)) (2.8.0)
+Requirement already satisfied: pytz>=2017.2 in /usr/local/micron/lib/python3.8/site-packages (from pandas->datasets==2.7.1->-r requirements.txt (line 4)) (2019.2)
+Requirement already satisfied: six>=1.5 in /usr/local/micron/lib/python3.8/site-packages (from python-dateutil>=2.7.3->pandas->datasets==2.7.1->-r requirements.txt (line 4)) (1.12.0)
+Collecting propcache>=0.2.0
+  Downloading propcache-0.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (213 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 213.6/213.6 kB 5.0 MB/s eta 0:00:00
+Installing collected packages: tokenizers, xxhash, urllib3, tqdm, regex, propcache, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cublas-cu11, numpy, multidict, hf-xet, fsspec, frozenlist, filelock, dill, attrs, async-timeout, aiohappyeyeballs, yarl, pyarrow, nvidia-cudnn-cu11, multiprocess, aiosignal, torch, responses, huggingface-hub, aiohttp, transformers, torchvision, datasets
+  WARNING: The script tqdm is installed in '/users/ssdrive/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts f2py, f2py3 and f2py3.8 are installed in '/users/ssdrive/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts convert-caffe2-to-onnx, convert-onnx-to-caffe2 and torchrun are installed in '/users/ssdrive/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The scripts hf, huggingface-cli and tiny-agents are installed in '/users/ssdrive/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script transformers-cli is installed in '/users/ssdrive/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script datasets-cli is installed in '/users/ssdrive/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed aiohappyeyeballs-2.4.4 aiohttp-3.10.11 aiosignal-1.3.1 async-timeout-5.0.1 attrs-25.3.0 datasets-2.7.1 dill-0.3.6 filelock-3.16.1 frozenlist-1.5.0 fsspec-2025.3.0 hf-xet-1.1.10 huggingface-hub-0.35.3 multidict-6.1.0 multiprocess-0.70.14 numpy-1.21.6 nvidia-cublas-cu11-11.10.3.66 nvidia-cuda-nvrtc-cu11-11.7.99 nvidia-cuda-runtime-cu11-11.7.99 nvidia-cudnn-cu11-8.5.0.96 propcache-0.2.0 pyarrow-17.0.0 regex-2024.11.6 responses-0.18.0 tokenizers-0.13.3 torch-1.13.1 torchvision-0.14.1 tqdm-4.67.1 transformers-4.26.1 urllib3-1.25.11 xxhash-3.6.0 yarl-1.15.2
+$
