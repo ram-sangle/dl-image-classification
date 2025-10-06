@@ -74,7 +74,10 @@ You can modify the script to print more details or per-class accuracy if needed.
 
 Note: Both scripts have additional arguments (e.g., --device to force CPU/GPU, etc.) – run python src/train.py -h or python src/evaluate.py -h to see all options.
 
-***Overview***
+
+## Project Overview
+
+
 Data Loading: The data_loader.py module uses Hugging Face’s datasets library to fetch the dataset (by name). 
 It applies necessary transformations (resizing images, converting to PyTorch tensors, normalization, etc.) and prepares PyTorch DataLoader objects for the training, validation, and test splits. 
 This encapsulation makes it easy to swap in a different dataset by changing one argument (--dataset). (For example, you could use --dataset cifar10 with slight modifications, as long as the dataset is available on Hugging Face.) 
