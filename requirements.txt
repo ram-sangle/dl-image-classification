@@ -1,0 +1,7 @@
+### requirements.txt
+```plaintext
+torch==1.13.1
+torchvision==0.14.1
+datasets==2.7.1      # Hugging Face Datasets library for loading data
+transformers==4.26.1 # (Optional) needed if you plan to use Hugging Face models
+numpy==1.21.6
