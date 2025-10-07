@@ -1,3 +1,11 @@
+python src/train.py --dataset beans --epochs 5 --batch_size 32 --learning_rate 0.001 --output_dir results/
+Using device: cpu
+Number of classes: 3
+/users/ssdrive/.local/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/users/ssdrive/.local/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet18_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet18_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
 Epoch 1/5, Train Loss: 0.185, Train Acc: 93.1%, Val Loss: 0.581, Val Acc: 73.6%
 Epoch 2/5, Train Loss: 0.041, Train Acc: 98.2%, Val Loss: 0.062, Val Acc: 97.5%
 Epoch 3/5, Train Loss: 0.033, Train Acc: 98.9%, Val Loss: 0.093, Val Acc: 96.1%
