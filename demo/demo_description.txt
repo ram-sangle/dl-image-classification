@@ -1,0 +1,4 @@
+Demo video contains:
+- Intro of prject, repo directory structure 
+- Details of training and evaluation
+- Walkthrough of execution logs
