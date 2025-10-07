@@ -49,7 +49,7 @@ You can open and modify run.sh to change these defaults or run individual steps.
 
 ***Running manually with Python:***
 ```bash
-python src/train.py --dataset beans --epochs 5 --batch_size 32 --learning_rate 0.001 --output_dir results/
+python src/train.py --dataset data/beans/train --epochs 5 --batch_size 32 --learning_rate 0.001 --output_dir results/
 ```
 Options:
 
@@ -114,7 +114,7 @@ Epoch 5/5, Train Loss: 0.29, Train Acc: 91.5%, Val Loss: 0.25, Val Acc: 92.3%
 This shows the model improving each epoch, after final epoch, the trained model is saved to results/model.pth.
 
 Evaluation: The evaluate.py script loads the saved model and uses the test set to measure final performance. It reports the overall accuracy. 
-In our example, we expect around 90%+ accuracy on the beans test set (since the model learned to classify the leaf images well). 
+In our example, we expect around 90%+ accuracy on the beans test set (since the model learned to classify the beans images well). 
 This separate evaluation step demonstrates how to use the trained model for inference on new data.
 
 Throughout the code, we use GPU acceleration where possible. The model and data batches are moved to torch.device("cuda") when available, so matrix operations (forward pass, backward pass) execute on the GPU. 
