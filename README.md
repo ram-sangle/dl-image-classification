@@ -1,7 +1,7 @@
 # Deep Learning Project – Beans Image Classification
 
-This project is a GPU-accelerated deep learning application that classifies bean plant leaf images into three categories (healthy or two types of disease) using a PyTorch convolutional neural network. 
-It uses an open-source dataset from Hugging Face (`beans` dataset) and demonstrates effective use of GPU for training a transfer-learning model. 
+This project is a GPU-accelerated deep learning application that classifies coffee beans images into three categories (grades 1-3) using a PyTorch convolutional neural network. 
+It uses an open-source dataset from Hugging Face (`coffee-beans` dataset), manually downloaded for ease and demonstrates effective use of GPU for training a transfer-learning model. 
 
 ## Project Structure
 
@@ -9,13 +9,17 @@ It uses an open-source dataset from Hugging Face (`beans` dataset) and demonstra
   - `data_loader.py` – Functions to download/preprocess the dataset and create PyTorch DataLoaders.
   - `model.py` – Defines the neural network model (using a pre-trained ResNet18) and prepares it for fine-tuning.
   - `train.py` – Script to train the model; parses command-line arguments for configuration.
-  - `evaluate.py` – Script to evaluate the trained model on the test set and output accuracy.
+  - `evaluate.py` – Script to evaluate the trained model on the evaluation and output accuracy.
   - `utils.py` – Utility functions (e.g., for device selection and random seeding).
+  - `test.py`- Test on a seperate dataset to check per class accuracy.
 - **`scripts/`**: Helper shell scripts.
   - `run.sh` – Example script showing how to run training and evaluation with default parameters.
 - **`results/`**: Output artifacts from running the code.
   - `training_log.txt` – Sample log of the training process (epoch losses and accuracies).
-  - (After running, this folder will also contain the saved model checkpoint, e.g., `model.pth`.)
+  - `installation_log.txt` – Sample log of dependency installation for project.
+  - `evaluation_log.txt` – Sample log of evaluation script run.
+  - `test_log.txt` – Sample log of test script run.
+  - `model.pth` - Trained resnet model checkpoint using dataset under `data/train`
 - **`requirements.txt`**: Python dependencies to install.
 - **`README.md`**: Project documentation (you are reading it).
 
@@ -74,11 +78,20 @@ You can modify the script to print more details or per-class accuracy if needed.
 
 Note: Both scripts have additional arguments (e.g., --device to force CPU/GPU, etc.) – run python src/train.py -h or python src/evaluate.py -h to see all options.
 
+***Testing the model:***
+After training and evaluation run the test script for checking accuracy on unseen samples:
+```bash
+python src/test.py --model_path results/my_model.pth --test_data_path data/beans/test
+```
+Options:
+
+--model_path : Path to the model file (default results/model.pth as saved by train.py).
+--test_data_path : Path to test dataset files
 
 ## Project Overview
 
 
-Data Loading: The data_loader.py module uses Hugging Face’s datasets library to fetch the dataset (by name). 
+Data Loading: The data_loader.py module uses Hugging Face’s datasets library to fetch the dataset (by name) or manually downloaded dataset. 
 It applies necessary transformations (resizing images, converting to PyTorch tensors, normalization, etc.) and prepares PyTorch DataLoader objects for the training, validation, and test splits. 
 This encapsulation makes it easy to swap in a different dataset by changing one argument (--dataset). (For example, you could use --dataset cifar10 with slight modifications, as long as the dataset is available on Hugging Face.) 
 The Beans dataset has three classes; the code automatically infers this from the dataset metadata using the ClassLabel feature.
