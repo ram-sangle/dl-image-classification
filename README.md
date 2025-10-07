@@ -122,16 +122,22 @@ This significantly speeds up training on image data. If no GPU is present, the c
 We also set a random seed for reproducibility in utils.py (so results are deterministic up to the inherent nondeterminism of CUDA operations).
 
 
-Sample Coffee Bean Images and their Grades :
+Sample Coffee Bean Images and their grades :
 
-<img width="167" height="160" alt="image" src="https://github.com/user-attachments/assets/4a179944-0ef1-4d9a-b76b-27d7d8f787f0" />
+<img width="160" height="160" alt="image" src="https://github.com/user-attachments/assets/4a179944-0ef1-4d9a-b76b-27d7d8f787f0" />
+
 Bean Grade 1
 
-<img width="261" height="234" alt="image" src="https://github.com/user-attachments/assets/596a1a13-e785-4a7b-9116-09a23d5ab1d6" />
+
+<img width="160" height="160" alt="image" src="https://github.com/user-attachments/assets/596a1a13-e785-4a7b-9116-09a23d5ab1d6" />
+
 Bean Grade 2
 
-<img width="259" height="276" alt="image" src="https://github.com/user-attachments/assets/03188a7c-1638-4fd8-9912-31f78da035aa" />
+
+<img width="160" height="160" alt="image" src="https://github.com/user-attachments/assets/03188a7c-1638-4fd8-9912-31f78da035aa" />
+
 Bean Grade 3
+
 
 Model gets trained on these 3 types and tries to bin/grade as per trained data.
 From test data, we observed identifying grade 2 has lessor accuracy than other two grades.
