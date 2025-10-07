@@ -120,3 +120,30 @@ This separate evaluation step demonstrates how to use the trained model for infe
 Throughout the code, we use GPU acceleration where possible. The model and data batches are moved to torch.device("cuda") when available, so matrix operations (forward pass, backward pass) execute on the GPU. 
 This significantly speeds up training on image data. If no GPU is present, the code will automatically fall back to CPU to ensure usability in any environment. 
 We also set a random seed for reproducibility in utils.py (so results are deterministic up to the inherent nondeterminism of CUDA operations).
+
+
+Sample Coffee Bean Images and their Grades :
+
+<img width="167" height="160" alt="image" src="https://github.com/user-attachments/assets/4a179944-0ef1-4d9a-b76b-27d7d8f787f0" />
+Bean Grade 1
+
+<img width="261" height="234" alt="image" src="https://github.com/user-attachments/assets/596a1a13-e785-4a7b-9116-09a23d5ab1d6" />
+Bean Grade 2
+
+<img width="259" height="276" alt="image" src="https://github.com/user-attachments/assets/03188a7c-1638-4fd8-9912-31f78da035aa" />
+Bean Grade 3
+
+Model gets trained on these 3 types and tries to bin/grade as per trained data.
+From test data, we observed identifying grade 2 has lessor accuracy than other two grades.
+
+```
+$ python src/test.py --model_path results/model.pth --test_data_path data/beans/test
+Using device: cpu
+
+Overall Test Accuracy: 93.50% (187/200)
+
+Per-Class Accuracy:
+  Class '1': 100.00% (50/50)
+  Class '2': 74.00% (37/50)
+  Class '3': 100.00% (100/100)
+```
